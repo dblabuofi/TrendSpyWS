@@ -1,0 +1,102 @@
+void assignment1(int[] a, int n) {
+   for (int i = 0; i < n-1; i++) {      
+       for (int j = 0; j < n-i-1; j++) { 
+           if (arr[j] > arr[j+1]) {
+              int t = arr[j];
+			  arr[j] = arr[j + 1];
+			  arr[j + 1] = t;
+		   }
+	   }
+   }
+}
+
+
+graphs
+************Entry***************
+assignment1
+0-DECL-a $$ASSIGNED: a $$READING: []
+1-DECL-n $$ASSIGNED: n $$READING: []
+2-ASSIGN-i=0 $$ASSIGNED: i $$READING: []
+3-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]
+4-ASSIGN-i++ $$ASSIGNED: i $$READING: [i]
+5-ASSIGN-j=0 $$ASSIGNED: j $$READING: []
+6-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]
+7-ASSIGN-j++ $$ASSIGNED: j $$READING: [j]
+8-CTRL-arr[j]>arr[j+1] $$ASSIGNED: null $$READING: [j]
+9-ASSIGN-t=arr[j] $$ASSIGNED: t $$READING: [j]
+10-ASSIGN-arr[i+j]=arr[j+1] $$ASSIGNED: j $$READING: [j]
+11-ASSIGN-arr[j+1]=t $$ASSIGNED: j $$READING: [t]
+2-ASSIGN-i=0 $$ASSIGNED: i $$READING: []-DATA->3-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]
+1-DECL-n $$ASSIGNED: n $$READING: []-DATA->3-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]
+3-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]-CTRL->3-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]
+3-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]-CTRL->4-ASSIGN-i++ $$ASSIGNED: i $$READING: [i]
+3-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]-CTRL->5-ASSIGN-j=0 $$ASSIGNED: j $$READING: []
+3-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]-CTRL->6-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]
+2-ASSIGN-i=0 $$ASSIGNED: i $$READING: []-DATA->6-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]
+5-ASSIGN-j=0 $$ASSIGNED: j $$READING: []-DATA->6-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]
+1-DECL-n $$ASSIGNED: n $$READING: []-DATA->6-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]
+6-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]-CTRL->6-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]
+6-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]-CTRL->7-ASSIGN-j++ $$ASSIGNED: j $$READING: [j]
+6-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]-CTRL->8-CTRL-arr[j]>arr[j+1] $$ASSIGNED: null $$READING: [j]
+5-ASSIGN-j=0 $$ASSIGNED: j $$READING: []-DATA->8-CTRL-arr[j]>arr[j+1] $$ASSIGNED: null $$READING: [j]
+8-CTRL-arr[j]>arr[j+1] $$ASSIGNED: null $$READING: [j]-CTRL->9-ASSIGN-t=arr[j] $$ASSIGNED: t $$READING: [j]
+5-ASSIGN-j=0 $$ASSIGNED: j $$READING: []-DATA->9-ASSIGN-t=arr[j] $$ASSIGNED: t $$READING: [j]
+8-CTRL-arr[j]>arr[j+1] $$ASSIGNED: null $$READING: [j]-CTRL->10-ASSIGN-arr[i+j]=arr[j+1] $$ASSIGNED: j $$READING: [j]
+5-ASSIGN-j=0 $$ASSIGNED: j $$READING: []-DATA->10-ASSIGN-arr[i+j]=arr[j+1] $$ASSIGNED: j $$READING: [j]
+8-CTRL-arr[j]>arr[j+1] $$ASSIGNED: null $$READING: [j]-CTRL->11-ASSIGN-arr[j+1]=t $$ASSIGNED: j $$READING: [t]
+9-ASSIGN-t=arr[j] $$ASSIGNED: t $$READING: [j]-DATA->11-ASSIGN-arr[j+1]=t $$ASSIGNED: j $$READING: [t]
+11-ASSIGN-arr[j+1]=t $$ASSIGNED: j $$READING: [t]-DATA->7-ASSIGN-j++ $$ASSIGNED: j $$READING: [j]
+
+
+void bubbleSort(int arr[], int n){
+   int i, j;
+   for (i = 0; i < n-1; i++) {      
+       for (j = 0; j < n-i-1; j++) { 
+           if (arr[j] > arr[j+1]) {
+              int t = arr[j];
+			  arr[j] = arr[j + 1];
+			  arr[j + 1] = t;
+		   }
+	   }
+   }
+}
+
+bubbleSort
+0-DECL-arr $$ASSIGNED: arr $$READING: []
+1-DECL-n $$ASSIGNED: n $$READING: []
+2-DECL-i $$ASSIGNED: i $$READING: []
+3-DECL-j $$ASSIGNED: j $$READING: []
+4-ASSIGN-i=0 $$ASSIGNED: i $$READING: []
+5-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]
+6-ASSIGN-i++ $$ASSIGNED: i $$READING: [i]
+7-ASSIGN-j=0 $$ASSIGNED: j $$READING: []
+8-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]
+9-ASSIGN-j++ $$ASSIGNED: j $$READING: [j]
+10-CTRL-arr[j]>arr[j+1] $$ASSIGNED: null $$READING: [j]
+11-DECL-t $$ASSIGNED: t $$READING: []
+12-ASSIGN-t=arr[j] $$ASSIGNED: t $$READING: [j]
+13-ASSIGN-arr[j]=arr[j+1] $$ASSIGNED: j $$READING: [arr, j]
+14-ASSIGN-arr[j+1]=t $$ASSIGNED: j $$READING: [t]
+2-DECL-i $$ASSIGNED: i $$READING: []-DATA->5-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]
+1-DECL-n $$ASSIGNED: n $$READING: []-DATA->5-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]
+5-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]-CTRL->5-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]
+5-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]-CTRL->6-ASSIGN-i++ $$ASSIGNED: i $$READING: [i]
+2-DECL-i $$ASSIGNED: i $$READING: []-DATA->6-ASSIGN-i++ $$ASSIGNED: i $$READING: [i]
+5-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]-CTRL->7-ASSIGN-j=0 $$ASSIGNED: j $$READING: []
+5-CTRL-i<n-1 $$ASSIGNED: null $$READING: [i, n]-CTRL->8-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]
+3-DECL-j $$ASSIGNED: j $$READING: []-DATA->8-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]
+1-DECL-n $$ASSIGNED: n $$READING: []-DATA->8-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]
+2-DECL-i $$ASSIGNED: i $$READING: []-DATA->8-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]
+8-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]-CTRL->8-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]
+8-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]-CTRL->9-ASSIGN-j++ $$ASSIGNED: j $$READING: [j]
+3-DECL-j $$ASSIGNED: j $$READING: []-DATA->9-ASSIGN-j++ $$ASSIGNED: j $$READING: [j]
+8-CTRL-j<n-i-1 $$ASSIGNED: null $$READING: [i, j, n]-CTRL->10-CTRL-arr[j]>arr[j+1] $$ASSIGNED: null $$READING: [j]
+3-DECL-j $$ASSIGNED: j $$READING: []-DATA->10-CTRL-arr[j]>arr[j+1] $$ASSIGNED: null $$READING: [j]
+10-CTRL-arr[j]>arr[j+1] $$ASSIGNED: null $$READING: [j]-CTRL->11-DECL-t $$ASSIGNED: t $$READING: []
+10-CTRL-arr[j]>arr[j+1] $$ASSIGNED: null $$READING: [j]-CTRL->12-ASSIGN-t=arr[j] $$ASSIGNED: t $$READING: [j]
+3-DECL-j $$ASSIGNED: j $$READING: []-DATA->12-ASSIGN-t=arr[j] $$ASSIGNED: t $$READING: [j]
+10-CTRL-arr[j]>arr[j+1] $$ASSIGNED: null $$READING: [j]-CTRL->13-ASSIGN-arr[j]=arr[j+1] $$ASSIGNED: j $$READING: [arr, j]
+0-DECL-arr $$ASSIGNED: arr $$READING: []-DATA->13-ASSIGN-arr[j]=arr[j+1] $$ASSIGNED: j $$READING: [arr, j]
+3-DECL-j $$ASSIGNED: j $$READING: []-DATA->13-ASSIGN-arr[j]=arr[j+1] $$ASSIGNED: j $$READING: [arr, j]
+10-CTRL-arr[j]>arr[j+1] $$ASSIGNED: null $$READING: [j]-CTRL->14-ASSIGN-arr[j+1]=t $$ASSIGNED: j $$READING: [t]
+12-ASSIGN-t=arr[j] $$ASSIGNED: t $$READING: [j]-DATA->14-ASSIGN-arr[j+1]=t $$ASSIGNED: j $$READING: [t]
